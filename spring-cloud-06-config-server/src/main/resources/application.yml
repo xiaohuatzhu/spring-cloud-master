@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: config-server
+  profiles:       ## application-{}.yml
+    active: @spring.profiles.active@
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/xiaohuatzhu/springcloud
+          username: 554019518@qq.com
+          password: zhu920218
+          #search-paths: #相对路径
+            #- user-service

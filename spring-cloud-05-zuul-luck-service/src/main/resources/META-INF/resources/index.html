@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <form action="http://localhost:5000/luck-service/upload" enctype="multipart/form-data" method="post">
+            <input type="file" name="file"/> <br/>
+            <input type="submit" value="通过zuul普通上传"/>
+        </form>
+    </div>
+    <!-- 上传文件需要在url地址添加/zuul/* 前缀, 绕过zuul的dispatchServlet, 否则zuul的默认上传文件的限制会影响真正上传服务的文件限制 -->
+    <div>
+        <form action="http://localhost:5000/zuul/luck-service/upload" enctype="multipart/form-data" method="post">
+            <input type="file" name="file"/> <br/>
+            <input type="submit" value="通过zuul但是绕过zuul的dispathServlet进行上传"/>
+        </form>
+    </div>
+    <div>
+        <form action="http://localhost:7002/upload" enctype="multipart/form-data" method="post">
+            <input type="file" name="file"/> <br/>
+            <input type="submit" value="不走zuul直接上传"/>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: luck-service
+  profiles:       ## application-{}.yml
+    active: @spring.profiles.active@
+  http:
+    encoding:
+      charset: utf-8
+    multipart:
+      enabled: true
+      file-size-threshold: 10
+      max-file-size: 50MB
+      max-request-size: 80MB
+
+

@@ -1,0 +1,11 @@
+server:
+  port: 7001
+  context-path: /provider
+
+eureka:
+  client:
+    service-url:
+      #单点配置
+      #defaultZone: http://eureka1:8001/eureka/
+      #高可用配置
+      defaultZone: http://eureka1:8001/eureka/,http://eureka2:8002/eureka/

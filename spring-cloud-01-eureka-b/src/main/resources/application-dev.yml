@@ -1,0 +1,11 @@
+server:
+  port: 8002
+
+eureka:
+  instance:
+    hostname: eureka2
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 120
+  client:
+    service-url:
+      defaultZone: http://eureka1:8001/eureka/  #hosts 下增加 127.0.0.1 eureka1

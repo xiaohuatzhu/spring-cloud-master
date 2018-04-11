@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: hystrix-request
+  profiles:       ## application-{}.yml
+    active: @spring.profiles.active@
+
+##断路器超时时间: 断路器的超时时间需要大于ribbon的超时时间，不然不会触发重试。
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 2000
+
+custom:
+  restTemplate:
+    connect-timeout: 2000
+    connection-request-timeout: 2000
+    read-timeout: 30000
+
+

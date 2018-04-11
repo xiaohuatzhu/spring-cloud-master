@@ -1,0 +1,9 @@
+server:
+  port: 5001
+  context-path: /
+
+eureka:
+  client:
+    service-url:
+      #单点配置
+      defaultZone: http://eureka1:8001/eureka/
