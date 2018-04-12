@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>spring-cloud-master</groupId>
-    <artifactId>spring-cloud-rabbitmq-provider-1</artifactId>
+    <artifactId>spring-cloud-09-bus-client-2</artifactId>
 
     <dependencies>
         <dependency>
@@ -19,16 +19,19 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-amqp</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
         </dependency>
     </dependencies>
 
@@ -46,17 +49,16 @@
 
 
     <build>
-        <finalName>spring-cloud-05-zuul-hello-service</finalName>
+        <finalName>spring-cloud-06-config-client-2</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <!-- 主函数的入口 -->
-                    <mainClass>com.RabbitmqProviderApplication</mainClass>
+                    <mainClass>com.BusClientApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>

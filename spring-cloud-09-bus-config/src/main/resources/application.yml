@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: config-server
+  profiles:       ## application-{}.yml
+    active: @spring.profiles.active@
+  cloud:
+    config:
+      server:
+        git:
+#          uri: https://github.com/xiaohuatzhu/springcloud
+          uri: https://git.coding.net/zhuxiaohua/config
+          username: zhuxiaohua
+#          username: 554019518@qq.com
+          password: zhu920218
+          search-paths: test
+  rabbitmq:
+    host: 192.168.198.130
+    port: 5672
+    username: root
+    password: root
+
+management:
+  security:
+     enabled: false

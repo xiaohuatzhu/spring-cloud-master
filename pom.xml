@@ -34,8 +34,11 @@
         <module>spring-cloud-06-config-client</module>
         <module>spring-cloud-06-config-server</module>
         <module>spring-cloud-07-rabbitmq-eureka</module>
-        <module>spring-cloud-rabbitmq-provider-1</module>
-        <module>spring-cloud-rabbitmq-client-1</module>
+        <module>spring-cloud-09-bus-eureka</module>
+        <module>spring-cloud-09-bus-config</module>
+        <module>spring-cloud-09-bus-client</module>
+        <module>spring-cloud-09-bus-client-1</module>
+        <module>spring-cloud-09-bus-client-2</module>
     </modules>
     <packaging>pom</packaging>
 

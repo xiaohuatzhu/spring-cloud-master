@@ -1,0 +1,28 @@
+server:
+  context-path: /
+  port: 7000
+
+eureka:
+  client:
+    service-url:
+      #单点配置
+      defaultZone: http://eureka1:8001/eureka/
+
+##动态刷新需要验证, 方便测试禁用安全验证
+management:
+  security:
+    enabled: false
+
+spring:
+  application:
+    name: evn
+  cloud:
+    config:
+      uri: http://localhost:4000/ #表示配置中心的地址
+      profile: dev #配置中心的profile环境 dev test prod
+      label: master #2017-09-17-v1.0 #分支, 版本, 不配就是master
+  rabbitmq:
+    host: 192.168.198.130
+    port: 5672
+    username: root
+    password: root

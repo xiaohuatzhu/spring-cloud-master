@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>spring-cloud-master</groupId>
-    <artifactId>spring-cloud-rabbitmq-client-1</artifactId>
+    <artifactId>spring-cloud-07-rabbitmq-provider-1</artifactId>
 
     <dependencies>
         <dependency>
@@ -53,9 +53,10 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <!-- 主函数的入口 -->
-                    <mainClass>com.RabbitmqClientApplication</mainClass>
+                    <mainClass>com.RabbitmqProviderApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
 </project>
