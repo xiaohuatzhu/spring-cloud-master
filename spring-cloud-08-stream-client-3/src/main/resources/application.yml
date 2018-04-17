@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: stream-client
+  profiles:       ## application-{}.yml
+    active: @spring.profiles.active@
+  cloud:
+    stream:
+      bindings:
+        stream_provider_output:
+          destination: greetings

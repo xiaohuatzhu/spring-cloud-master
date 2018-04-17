@@ -9,20 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-cloud-07-rabbitmq-provider-1</artifactId>
+    <groupId>spring-cloud-master</groupId>
+    <artifactId>spring-cloud-08-stream-eureka</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-amqp</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
         </dependency>
     </dependencies>
 
@@ -40,14 +33,14 @@
 
 
     <build>
-        <finalName>spring-cloud-05-zuul-hello-service</finalName>
+        <finalName>spring-cloud-08-stream-eureka</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <!-- 主函数的入口 -->
-                    <mainClass>com.RabbitmqProviderApplication</mainClass>
+                    <mainClass>com.StreamEurekaApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

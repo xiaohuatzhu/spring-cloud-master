@@ -9,20 +9,22 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-cloud-07-rabbitmq-provider-1</artifactId>
+    <groupId>spring-cloud-master</groupId>
+    <artifactId>spring-cloud-08-stream-client-2</artifactId>
 
     <dependencies>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-amqp</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
     </dependencies>
 
@@ -40,17 +42,16 @@
 
 
     <build>
-        <finalName>spring-cloud-05-zuul-hello-service</finalName>
+        <finalName>spring-cloud-08-stream-client-2</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <!-- 主函数的入口 -->
-                    <mainClass>com.RabbitmqProviderApplication</mainClass>
+                    <mainClass>com.StreamClientApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>

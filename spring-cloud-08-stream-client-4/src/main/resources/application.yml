@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: stream-client
+  profiles:       ## application-{}.yml
+    active: @spring.profiles.active@
+  cloud:
+    stream:
+      bindings:
+        stream_provider_output:   #通道名称, 自定义
+          group: stream-client    #分组, 一个消息被只能被同一组中的一个实例处理, 没有分组的都能处理
+          destination: greetings  #主题, 发送/接受双方的主题一致才能接受消息
+#          consumer:
+#            partitioned: true #通过该参数开启消费者分区功能
+#      instanceCount: 2      #该参数指定了当前消费者的总实例数量
+#      instanceIndex: 1      #该参数设置当前实例的索引号，从0开始; 可以通过运行参数来为不同实例设置不同的索引值。

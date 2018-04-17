@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: stream-provider
+  profiles:       ## application-{}.yml
+    active: @spring.profiles.active@
+  cloud:
+    stream:
+      bindings:
+        stream_provider_output:   #t通道名称, 自定义
+          destination: greetings  #消息主题
+#          producer:
+#            partitionKeyExpression: payload #通过该参数指定了分区键的表达式规则，我们可以根据实际的输出消息规则来配置SpEL来生成合适的分区键
+#            partitionCount: 1               #该参数指定了消息分区的数量

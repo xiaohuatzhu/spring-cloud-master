@@ -34,6 +34,14 @@
         <module>spring-cloud-06-config-client</module>
         <module>spring-cloud-06-config-server</module>
         <module>spring-cloud-07-rabbitmq-eureka</module>
+        <module>spring-cloud-08-stream-eureka</module>
+        <module>spring-cloud-08-stream-hello</module>
+        <module>spring-cloud-08-stream-provider</module>
+        <module>spring-cloud-08-stream-client-1</module>
+        <module>spring-cloud-08-stream-client-2</module>
+        <module>spring-cloud-08-stream-client-3</module>
+        <module>spring-cloud-08-stream-client-4</module>
+        <module>spring-cloud-08-stream-client-5</module>
         <module>spring-cloud-09-bus-eureka</module>
         <module>spring-cloud-09-bus-config</module>
         <module>spring-cloud-09-bus-client</module>
