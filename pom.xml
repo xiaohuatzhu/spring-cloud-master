@@ -47,6 +47,11 @@
         <module>spring-cloud-09-bus-client</module>
         <module>spring-cloud-09-bus-client-1</module>
         <module>spring-cloud-09-bus-client-2</module>
+        <module>spring-cloud-10-sleuth-eureka</module>
+        <module>spring-cloud-10-sleuth-trace-1</module>
+        <module>spring-cloud-10-sleuth-trace-2</module>
+        <module>spring-cloud-10-sleuth-trace-3</module>
+        <module>spring-cloud-10-sleuth-zipkin-server</module>
     </modules>
     <packaging>pom</packaging>
 

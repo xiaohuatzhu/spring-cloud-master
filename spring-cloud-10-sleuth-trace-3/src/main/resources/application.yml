@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: trace-3
+  profiles:       ## application-{}.yml
+    active: @spring.profiles.active@
+
+##断路器超时时间: 断路器的超时时间需要大于ribbon的超时时间，不然不会触发重试。
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
+
+## feign代理的配置项
+feign:
+  ## 启动feign的断路器功能
+  hystrix:
+    enabled: true
+  ## 压缩
+  compression:
+    request:
+      min-request-size: 2048
+      mime-types:
+        - text/xml, application/xml, application/json
+      enabled: true
+    response:
+      enabled: true
+
+##全局配置服务超时时间, 注意这个配置是在结合Feign时生效, 单独使用Ribbon时没有用
+#ribbon:
+#  ConnecTimeout: 3000
+#  ReadTimeout: 5000
+#  MaxAutoRetries: 2
+
+##局部配置某个代理
+feign-provider:
+  ribbon:
+    ConnecTimeout: 3000
+    ReadTimeout: 5000
+    OkToRetryOnAllOperations: true  #对所有请求都进行重试
+    MaxAutoRetriesNextServer: 1     #切换实例的重试次数
+    MaxAutoRetries: 1               #对当前实例重试次数
+
+
+

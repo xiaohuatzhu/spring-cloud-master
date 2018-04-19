@@ -1,0 +1,11 @@
+server:
+  port: 8001
+
+eureka:
+  instance:
+    hostname: eureka1
+    lease-renewal-interval-in-seconds: 10     #客户端向服务器(注册中心)发送心跳的时间间隔
+    lease-expiration-duration-in-seconds: 120 #服务器(注册中心)租期到期时间, 也就是说服务器在收到最后一次心跳的时间上限
+  client:
+    service-url:
+      defaultZone: http://eureka1:8001/eureka/

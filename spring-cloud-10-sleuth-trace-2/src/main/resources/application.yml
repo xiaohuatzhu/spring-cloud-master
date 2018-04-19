@@ -1,0 +1,3 @@
+spring:
+  profiles:       ## application-{}.yml
+    active: @spring.profiles.active@

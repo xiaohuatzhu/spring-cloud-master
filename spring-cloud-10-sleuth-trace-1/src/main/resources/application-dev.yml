@@ -1,0 +1,33 @@
+server:
+  port: 7001
+  context-path: /
+
+eureka:
+  client:
+    service-url:
+      #单点配置
+      defaultZone: http://eureka1:8001/eureka/
+
+## 为了更直观的观察跟踪信息，我们还可以在application.properties中增加下面的配置
+## 通过将Spring MVC的请求分发日志级别调整为 DEBUG 级别，我们可以看到更多跟踪信息
+## logback-spring.xml 中的 level 设置会覆盖这里的设置
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        web:
+#          servlet:
+#            DispatcherServlet: DEBUG
+
+## 如果在zip-server应用中，我们将其端口设置为9411，并且均在本地调试的话，该参数也可以不配置，因为默认值就是http://localhost:9411
+spring:
+  zipkin:
+    base-url: http://localhost:9411
+  rabbitmq:
+    host: 192.168.198.130
+    port: 5672
+    username: root
+    password: root
+  sleuth:
+    sampler:
+      percentage: 0.1 #以请求百分比的方式配置和收集跟踪信息, 默认0.1
